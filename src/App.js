@@ -35,7 +35,7 @@ const App = () => {
   const contact = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/message', { name, email, message });
+      await axios.post('https://portfolio-section.herokuapp.com/message', { name, email, message });
       setname("")
       setemail("")
       setmessage("")
