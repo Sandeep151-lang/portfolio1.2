@@ -1,38 +1,171 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Volkhov&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@200&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  scroll-behavior: smooth;
+  background-image: url('https://img.freepik.com/free-vector/white-abstract-background_23-2148806276.jpg?size=626&ext=jpg');
+  background-size: cover;
+  transition: .5s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.n {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  padding: 10px 0;
+  background-color: rgba(79, 124, 186, 0.809);
+  font-weight: bold;
+}
+
+.homepage {
+  width: 100%;
+  height: 100vh;
+}
+
+
+
+.left h1 {
+  margin: 20% 0% 0 30%;
+  font-family: 'Russo One',
+    sans-serif;
+}
+
+.left p {
+  margin: 0 0 2% 30%;
+  font-family: 'Russo One',
+    sans-serif;
+  font-size: 30px;
+}
+
+.left p+a {
+  margin: 0 5% 0 30%;
+}
+
+.left p+button {
+  margin: 0 5% 0 30%;
+}
+
+.my-name {
+  color: rgba(70, 110, 196, 0.682)
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@1,600&family=Quicksand:wght@300&family=Spartan:wght@100&display=swap');
+
+.card-text {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: white !important
+}
+
+.project-card {
+  border: 1px solid wheat
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  border: 2px solid indianred;
+}
+
+.hire-button {
+  border: turquoise !important;
+  background-color: turquoise !important;
+  border-radius: 5px !important;
+  padding: 3px 15px !important;
+  box-shadow: 0px 0px 10px 0px rgb(180, 197, 139);
+}
+
+.resume-button {
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid turquoise !important;
+  border-radius: 5px !important;
+  padding: 3px 15px !important;
+  box-shadow: 0px 0px 10px 0px rgb(180, 197, 139);
+  font-family: Verdana,
+    Geneva,
+    Tahoma,
+    sans-serif;
+}
+
+.resume-button:hover {
+  background-color: turquoise !important;
+  color: white !important;
+}
+
+.about-head {
+  font-family: 'Volkhov',
+    serif;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.about-para {
+  font-family: 'Public Sans',
+    sans-serif;
+  font-weight: 600;
+  word-spacing: 5px;
+}
+
+.about_sub_para {
+  font-family: 'Volkhov',
+    serif;
+  font-size: 20px;
+}
+
+.about_heading_section {
+  font-family: 'Volkhov',
+    serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgba(70, 110, 196, 0.682);
+}
+.foot {
+  width: 100%;
+  height: 20vh;
+  background-color: black;
+}
+
+.copyright {
+  font-size: medium;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contact-part {
+  width: 50%;
+  margin: 0 25%;
+}
+
+.submit-button {
+  width: 100% !important;
+  background-color: rgba(70, 110, 196, 0.682) !important;
+  border: 1px solid rgba(70, 110, 196, 0.682) !important;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width:768px) {
+  .home-section {
+    display: block !important;
   }
-  to {
-    transform: rotate(360deg);
+.about-section {
+  display: block !important;
   }
-}
+
+  .project-flex {
+    display: block !important;
+    margin: 0 10%;
+  }
+  
+  .foot-page {
+    display: block !important;
+  }
+  }
