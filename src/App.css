@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Volkhov&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@1,600&family=Quicksand:wght@300&family=Spartan:wght@100&display=swap');
 
 * {
   margin: 0;
@@ -57,7 +58,6 @@ body {
   color: rgba(70, 110, 196, 0.682)
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@1,600&family=Quicksand:wght@300&family=Spartan:wght@100&display=swap');
 
 .card-text {
   font-family: 'Quicksand', sans-serif;
@@ -111,6 +111,21 @@ a {
   font-weight: bold;
 }
 
+.skill-text {
+  font-weight: bold;
+}
+
+.social-link {
+  margin-top: 8rem;
+}
+
+.github-link:hover {
+  color: rgb(89, 89, 183) !important;
+}
+
+.linked-In {
+  margin-top: 2rem;
+}
 .about-para {
   font-family: 'Public Sans',
     sans-serif;
@@ -123,6 +138,7 @@ a {
     serif;
   font-size: 20px;
 }
+
 
 .about_heading_section {
   font-family: 'Volkhov',
@@ -168,4 +184,34 @@ a {
   .foot-page {
     display: block !important;
   }
+  .right img {
+    width: 10rem;
+    height: 20rem;
+  }
+  }
+  
+  @media screen and (max-width:414px) {
+    .skill-card {
+      width: 100% !important;
+    }
+  }
+  
+  @media screen and (max-width:336px) {
+    .sorce-button {
+      margin: 10px 0px !important;
+    }
+  
+    .source-button {
+      margin: 10px 0px !important;
+    }
+  
+    .resume-button {
+      margin: 5% 29% !important;
+    }
+  }
+  
+  @media screen and (min-width:336px)and (max-width:395px) {
+    .source-button {
+      margin: 15px 0px !important;
+    }
   }
