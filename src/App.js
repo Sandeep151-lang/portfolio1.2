@@ -111,7 +111,7 @@ const App = () => {
                 <a href="https://github.com/Sandeep151-lang?tab=repositories" target="_blank"
                   rel="noreferrer" className='text-center social-link' style={{ "fontWeight": "bold" }}>
                   <AiFillGithub style={{ width: 30, height: 30, color: 'black' }} className="github-link" /></a>
-                <a href="https://github.com/Sandeep151-lang?tab=repositories" target="_blank"
+                <a href="https://www.linkedin.com/in/sandeep-nandanwar-29a4b61b9" target="_blank"
                   rel="noreferrer" className='text-center linked-In' style={{ "fontWeight": "bold" }}>
                   <GrLinkedinOption style={{ width: 30, height: 30, color: 'black' }} className="github-link" /></a>
               </div>
