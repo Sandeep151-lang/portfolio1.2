@@ -87,7 +87,8 @@ const App = () => {
             <p>I' am <span className='my-name'> Sandeep Nandanwar</span></p>
             <p>Web designer</p>
             <a href='#contact'><button className='btn btn-primary hire-button' >Hire Me</button></a>
-            <button className='btn btn-primary resume-button'>Resume</button>
+            <a href="https://drive.google.com/file/d/1LrhBajb9Dj90Qomftgm9g2aVyJhdu-9p/view" target="_blank"
+              rel="noreferrer"><button className='btn btn-primary resume-button'>Resume</button></a>
           </Container>
           <Container className='right text-center center'>
             <img src={me} alt="me" className='about-image' />
