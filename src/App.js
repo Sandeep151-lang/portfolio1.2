@@ -16,7 +16,7 @@ import { IoLogoNodejs } from 'react-icons/io';
 import axios from 'axios';
 import { GrLinkedinOption } from 'react-icons/gr'
 //import ScrollReveal from 'scrollreveal'
-import { Fade, Slide } from 'react-awesome-reveal'
+import { Fade } from 'react-awesome-reveal'
 
 
 
