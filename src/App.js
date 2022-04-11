@@ -16,7 +16,7 @@ import { IoLogoNodejs } from 'react-icons/io';
 import axios from 'axios';
 import { GrLinkedinOption } from 'react-icons/gr'
 //import ScrollReveal from 'scrollreveal'
-import { Fade } from 'react-awesome-reveal'
+import { Fade, Slide } from 'react-awesome-reveal'
 
 
 
@@ -101,7 +101,7 @@ const App = () => {
       {/* 
       --------------------------section about start----------------------------------------- */}
       <h1 className='text-center mt-5 about-head' id="about">About</h1>
-      <Fade cascade delay={100} >
+      <Fade cascade delay={300} >
         <section className='d-flex justify-content-space-around about-section'>
           <Container className='right text-center center'>
             <div className='d-flex justify-content-around'>
@@ -149,9 +149,10 @@ const App = () => {
       --------------------------section skill start----------------------------------------- */}
 
       <h1 className='text-center mt-5 about-head' id="skill">Skills</h1>
-      <Fade cascade delay={50}>
+
         <div className='d-flex container skill-section'>
-          <Container>
+        <Container>
+          <Fade cascade delay={500} triggerOnce>
             <div className='w3-card-4 container skill-card' style={{ 'borderRadius': '5px', width: '80%' }}>
               <div className='d-flex '>
                 <div className='d-flex justify-content-space-around'>
@@ -161,6 +162,9 @@ const App = () => {
               </div>
               <Line percent="80" strokeWidth="1" strokeColor="blue" prefixCls="rc-progress" />
             </div>
+          </Fade>
+          <Fade cascade delay={600} triggerOnce>
+
             <div className='w3-card-4 mt-3 container skill-card' style={{ 'borderRadius': '5px', width: '80%' }}>
               <div className='d-flex'>
                 <div className='d-flex justify-content-space-around'>
@@ -170,6 +174,9 @@ const App = () => {
               </div>
               <Line percent="70" strokeWidth="1" strokeColor="blue" />
             </div>
+          </Fade>
+          <Fade cascade delay={700} triggerOnce>
+
             <div className='w3-card-4 mt-3 container skill-card' style={{ 'borderRadius': '5px', width: '80%' }}>
               <div className='d-flex'>
                 <div className='d-flex justify-content-space-around'>
@@ -179,6 +186,9 @@ const App = () => {
               </div>
               <Line percent="70" strokeWidth="1" strokeColor="blue" />
             </div>
+          </Fade>
+          <Fade cascade delay={800} triggerOnce>
+
             <div className='w3-card-4 mt-3 container skill-card' style={{ 'borderRadius': '5px', width: '80%' }}>
               <div className='d-flex'>
                 <div className='d-flex justify-content-space-around'>
@@ -188,6 +198,9 @@ const App = () => {
               </div>
               <Line percent="70" strokeWidth="1" strokeColor="blue" />
             </div>
+          </Fade>
+          <Fade cascade delay={900} triggerOnce>
+
             <div className='w3-card-4 mt-3 container skill-card' style={{ 'borderRadius': '5px', width: '80%' }}>
               <div className='d-flex'>
                 <div className='d-flex justify-content-space-around'>
@@ -197,6 +210,9 @@ const App = () => {
               </div>
               <Line percent="50" strokeWidth="1" strokeColor="blue" />
             </div>
+          </Fade>
+          <Fade cascade delay={1000} triggerOnce>
+
             <div className='w3-card-4 mt-3 container skill-card' style={{ 'borderRadius': '5px', width: '80%' }}>
               <div className='d-flex'>
                 <div className='d-flex justify-content-space-around'>
@@ -206,6 +222,9 @@ const App = () => {
               </div>
               <Line percent="50" strokeWidth="1" strokeColor="blue" />
             </div>
+          </Fade>
+          <Fade cascade delay={1100} triggerOnce>
+
             <div className='w3-card-4 mt-3 container skill-card' style={{ 'borderRadius': '5px', width: '80%' }}>
               <div className='d-flex'>
                 <div className='d-flex justify-content-space-around'>
@@ -215,13 +234,14 @@ const App = () => {
               </div>
               <Line percent="60" strokeWidth="1" strokeColor="blue" />
             </div>
+          </Fade>
           </Container>
           <Container className='right text-center center'>
             <img src='https://images.unsplash.com/photo-1521790945508-bf2a36314e85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHNraWxsc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
               alt="me" className='about-image' width='100%' height={300} style={{ opacity: '0.7', borderRadius: '5px', marginTop: '10%' }} />
           </Container>
         </div>
-      </Fade>
+
       {/* 
       --------------------------section skill end----------------------------------------- */}
 
@@ -375,26 +395,32 @@ const App = () => {
 
 
       <h1 className='text-center mt-5 about-head' id="contact">Contact</h1>
-      <Fade cascade>
+
         <div className='container contact-section'>
           <form className='contact-part'>
+          <Fade cascade delay={200}>
             <div className="mb-3">
               <label htmlFor="name" className="form-label">Name</label>
               <input type="text" className="form-control" id="name" aria-describedby="name" value={name} onChange={(e) => setname(e.target.value)} />
             </div>
+          </Fade>
+          <Fade cascade delay={300}>
             <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
               <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value={email} onChange={(e) => { setemail(e.target.value) }} />
               <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
             </div>
+          </Fade>
+          <Fade cascade delay={400}>
             <div className="mb-3">
               <label htmlFor="exampleFormControlTextarea1" className="form-label">Message</label>
               <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" value={message} onChange={(e) => setmessage(e.target.value)}></textarea>
             </div>
+          </Fade>
+
             <button className="btn btn-primary submit-button" onClick={contact}>Submit</button>
           </form>
-        </div>
-      </Fade>
+      </div>
       {/* 
       --------------------------section Contact start----------------------------------------- */}
 
