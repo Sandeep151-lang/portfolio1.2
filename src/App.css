@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Volkhov&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@1,600&family=Quicksand:wght@300&family=Spartan:wght@100&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Anek+Odia&family=Public+Sans:wght@200&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -75,7 +75,7 @@ a {
 
 .project-card:hover {
   transform: scale(1.03);
-  border: 2px solid indianred;
+  border: 2px solid black;
 }
 
 .hire-button {
@@ -168,6 +168,17 @@ a {
   background-color: rgba(70, 110, 196, 0.682) !important;
   border: 1px solid rgba(70, 110, 196, 0.682) !important;
   }
+.inter-para {
+  font-family: 'Anek Odia',
+    sans-serif;
+  font-size: 23px;
+}
+
+.achievemnets {
+  font-family: 'Anek Odia',
+    sans-serif;
+  font-size: 23px;
+}
 @media screen and (max-width:768px) {
   .home-section {
     display: block !important;
@@ -189,14 +200,57 @@ a {
     height: 20rem;
   }
   }
-  
+.source-button {
+  border: turquoise !important;
+  background-color: turquoise !important;
+  border-radius: 5px !important;
+  padding: 3px 15px !important;
+  box-shadow: 0px 0px 10px 0px rgb(180, 197, 139);
+}
+
+.source-button-link {
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid turquoise !important;
+  border-radius: 5px !important;
+  padding: 3px 15px !important;
+  box-shadow: 0px 0px 10px 0px rgb(180, 197, 139);
+  font-family: Verdana,
+    Geneva,
+    Tahoma,
+    sans-serif;
+}
+
+.source-button-link:hover {
+  background-color: turquoise !important;
+  color: white !important;
+}
   @media screen and (max-width:414px) {
     .skill-card {
       width: 100% !important;
     }
   }
   
-  @media screen and (max-width:336px) {
+  @media screen and (max-width:791px) {
+    .interest-image {
+      max-width: 10rem !important;
+      margin-top: 50%;
+    }
+  
+    .achievemnets {
+      font-size: 20px;
+    }
+  
+  }
+  
+  @media screen and (max-width:362px) {
+    .achievemnets {
+      width: 40%;
+      font-size: 18px;
+    }
+  }
+  
+  /* @media screen and (max-width:336px) {
     .sorce-button {
       margin: 10px 0px !important;
     }
@@ -215,3 +269,4 @@ a {
       margin: 15px 0px !important;
     }
   }
+  */
