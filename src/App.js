@@ -1,14 +1,15 @@
 //import logo from './logo.svg';
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css';
 import { Container } from 'react-bootstrap';
 import { AiFillGithub } from 'react-icons/ai';
-import me from '../src/assets/sandeep4.png';
+//import me from '../src/assets/sandeep4.png';
+//import home1 from '../src/assets/home1.png'
 import certificate from '../src/assets/GuviCertification.png'
 import certificate1 from '../src/assets/sample2.png'
 import aboutimage from '../src/assets/sandeepcontact.png';
 import { Line } from 'rc-progress';
-import { AiFillHtml5 } from 'react-icons/ai';
+import { AiFillHtml5, AiFillStar } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
 import { SiJavascript, SiMongodb } from 'react-icons/si';
 import { RiReactjsFill } from 'react-icons/ri';
@@ -17,33 +18,54 @@ import axios from 'axios';
 import { GrLinkedinOption } from 'react-icons/gr'
 //import ScrollReveal from 'scrollreveal'
 import { Fade } from 'react-awesome-reveal'
+//import { SpinnerCircular } from 'spinners-react';
+//import TypeWriterEffect from 'react-typewriter-effect';
+import ReactTypingEffect from 'react-typing-effect';
+import Loader from './Loader';
+import Experience from './Experience';
+//import DarkModeToggle from "react-dark-mode-toggle";
 
 
 
 
 const App = () => {
 
-  const [name, setname] = useState('');
-  const [email, setemail] = useState('');
-  const [message, setmessage] = useState('');
+  const [loading, setloading] = useState(false);
+  // const [isDarkMode, setIsDarkMode] = useState(() => false);
 
-  const contact = async (e) => {
-    e.preventDefault();
-    try {
-      await axios.post('https://portfolio-section.herokuapp.com/message', { name, email, message });
-      setname("")
-      setemail("")
-      setmessage("")
-      alert('message sent')
-    } catch (error) {
+  useEffect(() => {
+    setloading(true);
+    setTimeout(() => {
+      setloading(false)
+    }, 3000);
+  }, [])
 
-      alert(error.response.data)
-    }
-  }
+  // const [name, setname] = useState('');
+  // const [email, setemail] = useState('');
+  // const [message, setmessage] = useState('');
+
+  // const contact = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     await axios.post('https://portfolio-section.herokuapp.com/message', { name, email, message });
+  //     setname("")
+  //     setemail("")
+  //     setmessage("")
+  //     alert('message sent')
+  //   } catch (error) {
+
+  //     alert(error.response.data)
+  //   }
+  // }
+
 
 
   return (
-    <div className="w3-card-4">
+    <>
+      {loading ? <Loader /> :
+
+        <div className="w3-card-4">
+
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid n w3-card ">
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,12 +74,15 @@ const App = () => {
           <div className="collapse navbar-collapse container-fluid" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item ">
-                <a className="nav-link  home" aria-current="page" href="#home">Home</a>
+                    <a className="nav-link  home" aria-current="page" href="#hom" style={{ 'fontSize': '1.5rem' }}>Sandeep Nandanwar<span>&#128512;</span></a>
               </li>
             </ul>
             <form className="">
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex nav-list">
-                <li className="nav-item">
+                  <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex nav-list">
+                    <li className="nav-item">
+                      <a className="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="#about">About</a>
                 </li>
                 <li className="nav-item">
@@ -83,21 +108,24 @@ const App = () => {
       <Fade direction='down' delay={50} damping="0.5" triggerOnce>
         <section className='d-flex justify-content-space-around mt-5 home-section' id="home">
           <Container className='left '>
-            <h1>Hello,</h1>
-            <p>I' am <span className='my-name'> Sandeep Nandanwar</span></p>
-            <p>Web designer</p>
+                <h1>Hello,</h1>
+
+                <p>I' am <span className='my-name'> Sandeep Nandanwar</span></p>
+                <p className='my-name'><ReactTypingEffect
+                  text={["Web designer"]}
+                /></p>
             <a href='#contact'><button className='btn btn-primary hire-button' >Hire Me</button></a>
             <a href="https://drive.google.com/file/d/1LrhBajb9Dj90Qomftgm9g2aVyJhdu-9p/view" target="_blank"
               rel="noreferrer"><button className='btn btn-primary resume-button'>Resume</button></a>
           </Container>
           <Container className='right text-center center'>
-            <img src={me} alt="me" className='about-image' />
+                <img src="https://png.pngtree.com/element_our/20190529/ourlarge/pngtree-flat-wind-work-business-image_1199291.jpg" alt="me" className='about-image' height="110%" />
           </Container>
         </section>
       </Fade>
       {/* 
       --------------------------section home end----------------------------------------- */}
-
+          <Experience />
       {/* 
       --------------------------section about start----------------------------------------- */}
       <h1 className='text-center mt-5 about-head' id="about">About</h1>
@@ -106,15 +134,15 @@ const App = () => {
           <Container className='right text-center center'>
             <div className='d-flex justify-content-around'>
               <div className='right text-center center'>
-                <img src={aboutimage} alt="me" className='about-image' />
+                    <img src={aboutimage} alt="me" className='about-image mt-5' />
               </div>
               <div className='d-flex flex-column'>
                 <a href="https://github.com/Sandeep151-lang?tab=repositories" target="_blank"
                   rel="noreferrer" className='text-center social-link' style={{ "fontWeight": "bold" }}>
-                  <AiFillGithub style={{ width: 30, height: 30, color: 'black' }} className="github-link" /></a>
+                      <AiFillGithub style={{ width: 25, height: 25 }} className="github-link" /></a>
                 <a href="https://www.linkedin.com/in/sandeep-nandanwar-29a4b61b9" target="_blank"
                   rel="noreferrer" className='text-center linked-In' style={{ "fontWeight": "bold" }}>
-                  <GrLinkedinOption style={{ width: 30, height: 30, color: 'black' }} className="github-link" /></a>
+                      <GrLinkedinOption style={{ width: 25, height: 25 }} className="linked-link" /></a>
               </div>
             </div>
           </Container>
@@ -129,13 +157,13 @@ const App = () => {
             <p className='about-para'>When I'm not coding I play games with my friends, watch some show on prime video , or if the weather's
               good , play cricket.</p>
             <p className='about-para'>
-              <span className='about_sub_para'>School:</span> S.T. Vishna R.R.Nector
+                  <span className='about_sub_para'>School</span> : S.T. Vishna R.R.Nector
             </p>
             <p className='about-para'>
-              <span className='about_sub_para'>College:</span> B.E. from  S.B JAIN INSTITUTE OF TECHNOLOGY MANAGEMENT & RESEARCH
+                  <span className='about_sub_para'>College</span> : B.E. from  S.B JAIN INSTITUTE OF TECHNOLOGY MANAGEMENT & RESEARCH
             </p>
             <p className='about-para'>
-              <span className='about_sub_para'>Stream: </span>Computer Science & Engineering
+                  <span className='about_sub_para'>Stream</span> : Computer Science & Engineering
             </p>
             <hr />
           </Container>
@@ -148,8 +176,7 @@ const App = () => {
       {/* 
       --------------------------section skill start----------------------------------------- */}
 
-      <h1 className='text-center mt-5 about-head' id="skill">Skills</h1>
-
+          <h1 className='text-center mt-5 about-head' id="skill">Skills</h1>
         <div className='d-flex container skill-section'>
         <Container>
           <Fade cascade delay={500} triggerOnce>
@@ -378,35 +405,37 @@ const App = () => {
       --------------------------section Interest/Achievements start----------------------------------------- */}
       <Container className='d-flex text-center  inter-achieve mt-5' id="interest">
         <Container>
-          <img className='interest-image' src="https://freepngimg.com/thumb/volleyball/5-2-volleyball-png-clipart.png" style={{ borderRadius: '30%', maxWidth: "30rem" }} alt='imga' />
+              <img className='interest-image' src="https://freepngimg.com/thumb/volleyball/5-2-volleyball-png-clipart.png"
+                style={{ borderRadius: '30%', maxWidth: "30rem" }} alt='imga' />
         </Container>
-        <Container className='inter-para'>
-          <h1 className='justify-content-evenly text-center'>Interest</h1>
+            <Container className=''>
+              <h1 className='justify-content-evenly text-center' style={{ 'fontSize': '50px', color: 'rgb(0 28 85)' }}>Interest</h1>
           <hr />
-          <Fade direction='left' delay={200} triggerOnce>
-            <p>Watching Movies</p>
-            <p>Sports</p>
-            <p>Gaming</p>
-            <p>Traveling</p>
-            <p>Cooking</p>
-            <p>Art</p>
-            <p>Reading</p>
+              <Fade direction='left' delay={200} triggerOnce >
+                <p style={{ 'fontSize': '22px', color: 'rgb(109, 132, 178' }}>Watching Movies</p>
+                <p style={{ 'fontSize': '22px', color: 'rgb(109, 132, 178' }}>Sports</p>
+                <p style={{ 'fontSize': '22px', color: 'rgb(109, 132, 178' }}>Gaming</p>
+                <p style={{ 'fontSize': '22px', color: 'rgb(109, 132, 178' }}>Traveling</p>
+                <p style={{ 'fontSize': '22px', color: 'rgb(109, 132, 178' }}>Cooking</p>
+                <p style={{ 'fontSize': '22px', color: 'rgb(109, 132, 178' }}>Art</p>
+                <p style={{ 'fontSize': '22px', color: 'rgb(109, 132, 178' }}>Reading</p>
           </Fade>
         </Container>
       </Container>
       <Container className='d-flex  inter-achieve mt-5 text-center'>
         <Container className='achievemnets'>
-          <h1 className='justify-content-evenly text-center'>Achievements</h1>
+              <h1 className='justify-content-evenly text-center' style={{ 'fontSize': '50px', color: 'rgb(0 28 85)' }}>Achievements</h1>
           <hr />
           <Fade direction='right' delay={200} triggerOnce>
-            <p>Developed or implemented new procedures or systems</p>
-            <p>Come up with a new idea that improved things</p>
-            <p>Contributed to good customer service</p>
-            <p>Identified a problem and solved it</p>
+                <p style={{ 'fontSize': '22px', color: 'rgb(109, 132, 178' }}>Developed or implemented new procedures or systems</p>
+                <p style={{ 'fontSize': '22px', color: 'rgb(109, 132, 178' }}>Come up with a new idea that improved things</p>
+                <p style={{ 'fontSize': '22px', color: 'rgb(109, 132, 178' }}>Contributed to good customer service</p>
+                <p style={{ 'fontSize': '22px', color: 'rgb(109, 132, 178' }}>Identified a problem and solved it</p>
           </Fade>
         </Container>
         <Container>
-          <img className='interest-image' src="https://st.depositphotos.com/1552219/3605/i/600/depositphotos_36058621-stock-photo-man-with-check-mark.jpg" style={{ borderRadius: '30%', maxWidth: "30rem" }} alt='imga' />
+              <img className='interest-image' src="https://st.depositphotos.com/1552219/3605/i/600/depositphotos_36058621-stock-photo-man-with-check-mark.jpg"
+                style={{ borderRadius: '30%', maxWidth: "30rem" }} alt='imga' />
         </Container>
       </Container>
 
@@ -417,7 +446,7 @@ const App = () => {
       {/* 
       --------------------------section Contact start----------------------------------------- */}
 
-
+          {/*
       <h1 className='text-center mt-5 about-head' id="contact">Contact</h1>
 
         <div className='container contact-section'>
@@ -438,16 +467,49 @@ const App = () => {
           <Fade cascade delay={400}>
             <div className="mb-3">
               <label htmlFor="exampleFormControlTextarea1" className="form-label">Message</label>
-              <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" value={message} onChange={(e) => setmessage(e.target.value)}></textarea>
+                  <textarea className="form-control text-area" id="exampleFormControlTextarea1" rows="3" value={message} onChange={(e) => setmessage(e.target.value)}></textarea>
             </div>
           </Fade>
 
             <button className="btn btn-primary submit-button" onClick={contact}>Submit</button>
           </form>
-      </div>
+      </div> */}
       {/* 
       --------------------------section Contact start----------------------------------------- */}
 
+
+          {/* -------------------------------------------contact section start---------------------------------- */}
+
+          <section className='mt-5 experience' id="contact" >
+            <h1 className='text-center my-3' style={{ color: "rgb(0, 28, 85)", fontSize: "50px", opacity: "1" }}>Contact</h1>
+            <div className='d-flex justify-content-space-around experience-flex'>
+
+              <Container className='text-center center'>
+                <Fade direction='left' delay={50} damping="0.5" triggerOnce>
+
+                  <img src="https://media.istockphoto.com/vectors/email-vector-flat-icon-vector-id1131969913?k=20&m=1131969913&s=612x612&w=0&h=bc001355mU2lj9gJEaeKFj--Bx3H4UBgiXUujNGQvZE="
+                    alt='img' className='experience-image' />
+                </Fade>
+              </Container>
+              <Container className='center'>
+
+                <p className='text-center' style={{ color: "rgb(0, 28, 85)", fontSize: "40px", fontWeight: 'bold' }}>Address</p>
+
+                <ul className='contact-list'>
+                  <p >Type-3RD Q.No-101 Kendranchal Colony Dhoomanganj, </p>
+                  <p className='text-center'>Prayagraj/Allahabad</p>
+                  <p className='text-center'>Uttar Pradesh - 211011</p>
+                  <h1 className='text-center' style={{ color: "rgb(0, 28, 85)", fontSize: "40px", fontWeight: 'bold', marginTop: '2rem' }}>Phone Number</h1>
+                  <p className='text-center'>+91 8738854495</p>
+                </ul>
+                <a href="https://github.com/Sandeep151-lang/portfolio-1.0" target="_blank"
+                  rel="noreferrer"><button className="btn btn-primary submit-button "><AiFillStar style={{ color: 'orange' }} className="mx-2" />Star Me On Github</button></a>
+
+              </Container>
+            </div>
+          </section >
+
+          {/* -------------------------------------------------contact section end------------------------------ */}
 
       {/* 
       --------------------------section Footer start----------------------------------------- */}
@@ -463,7 +525,9 @@ const App = () => {
       </section>
       {/* 
       --------------------------section Footer end----------------------------------------- */}
-    </div>
+        </div>
+      }
+    </>
   );
 }
 

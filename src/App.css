@@ -3,6 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@1,600&family=Quicksand:wght@300&family=Spartan:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anek+Odia&family=Public+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Recursive:wght@900&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -11,19 +16,54 @@
 
 body {
   scroll-behavior: smooth;
-  background-image: url('https://img.freepik.com/free-vector/white-abstract-background_23-2148806276.jpg?size=626&ext=jpg');
+  background-color: whitesmoke;
+  /* background-color: rgb(237, 249, 254); */
+  /* background-image: url('https://img.freepik.com/free-vector/white-abstract-background_23-2148806276.jpg?size=626&ext=jpg'); */
   background-size: cover;
   transition: .5s;
 }
 
+/* .experience{
+  width: 100%;
+  height: 100vh;
+} */
+
+.home-section {
+  width: 100%;
+  height: 85vh;
+}
+
+.home {
+  font-family: 'Cedarville Cursive',
+    cursive;
+}
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(39, 39, 130);
+  color: white;
+  position: relative;
+}
+
+
+.load-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: 'Cedarville Cursive',
+    cursive;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+}
 .n {
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 1;
   padding: 10px 0;
-  background-color: rgba(79, 124, 186, 0.809);
-  font-weight: bold;
+  background-color: rgb(0, 28, 85);
+  font-size: 1.2rem;
 }
 
 .homepage {
@@ -37,6 +77,7 @@ body {
   margin: 20% 0% 0 30%;
   font-family: 'Russo One',
     sans-serif;
+    font-size: 40px;
 }
 
 .left p {
@@ -55,7 +96,8 @@ body {
 }
 
 .my-name {
-  color: rgba(70, 110, 196, 0.682)
+  color: rgb(0, 28, 85);
+  line-height: 40px !important;
 }
 
 
@@ -88,7 +130,7 @@ a {
 
 .resume-button {
   background-color: white !important;
-  color: black !important;
+  color: rgba(0, 0, 0, 0.731) !important;
   border: 1px solid turquoise !important;
   border-radius: 5px !important;
   padding: 3px 15px !important;
@@ -97,6 +139,7 @@ a {
     Geneva,
     Tahoma,
     sans-serif;
+    font-size: 18px;
 }
 
 .resume-button:hover {
@@ -105,47 +148,74 @@ a {
 }
 
 .about-head {
-  font-family: 'Volkhov',
-    serif;
+  /* font-family: 'Volkhov',
+                                                                                                                          serif; */
   font-size: 50px;
-  font-weight: bold;
+  color: rgb(0, 28, 85);
+  
+  /* font-weight: bold; */
 }
 
 .skill-text {
-  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .social-link {
   margin-top: 8rem;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.693);
 }
 
-.github-link:hover {
-  color: rgb(89, 89, 183) !important;
+.social-link:hover {
+  background-color: black;
 }
 
+.github-link {
+  border-radius: 50%;
+}
+
+/* .github-link:hover {
+  color: black !important;
+} */
 .linked-In {
   margin-top: 2rem;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #0e76a8;
+  
+  }
+  
+  .linked-In:hover {
+    background-color: black;
 }
 .about-para {
-  font-family: 'Public Sans',
-    sans-serif;
-  font-weight: 600;
-  word-spacing: 5px;
+font-size: 22px;
+color: rgb(109, 132, 178);
+word-spacing: 10px;
+/* color: rgb(127, 141, 170); */
+/* color: rgb(0, 28, 85);
+  word-spacing: 10px; */
 }
 
 .about_sub_para {
   font-family: 'Volkhov',
     serif;
   font-size: 20px;
+  padding: 2px 5px;
+  border: 1px solid rgb(0, 28, 85);
+  border-radius: 3px;
+  background-color: rgb(0, 28, 85);
+  color: white;
 }
 
 
 .about_heading_section {
-  font-family: 'Volkhov',
-    serif;
+  
   font-size: 30px;
-  font-weight: bold;
-  color: rgba(70, 110, 196, 0.682);
+  color: rgb(0, 28, 85);
 }
 .foot {
   width: 100%;
@@ -164,9 +234,11 @@ a {
 }
 
 .submit-button {
-  width: 100% !important;
-  background-color: rgba(70, 110, 196, 0.682) !important;
-  border: 1px solid rgba(70, 110, 196, 0.682) !important;
+  width: 50% !important;
+  font-size: 20px;
+  background-color: rgb(0, 28, 85) !important;
+  border: 1px solid rgb(0, 28, 85) !important;
+  margin: 0 25%;
   }
 .inter-para {
   font-family: 'Anek Odia',
@@ -174,12 +246,47 @@ a {
   font-size: 23px;
 }
 
+.what-list {
+  margin-top: 30px;
+  font-size: 22px;
+  color: rgb(109, 132, 178);
+}
+
+
+
+.contact-list {
+  font-size: 22px;
+  color: rgb(109, 132, 178);
+}
 .achievemnets {
   font-family: 'Anek Odia',
     sans-serif;
   font-size: 23px;
 }
+.form-label {
+  font-size: 22px;
+}
+
+input[type=text] {
+  border: 1px solid black;
+}
+
+input[type=email] {
+  border: 1px solid black;
+}
+
+.text-area {
+  border: 1px solid black;
+}
 @media screen and (max-width:768px) {
+  .experience-image {
+    width: 10rem;
+    height: 20rem;
+  }
+  
+  .experience-flex {
+    display: block !important;
+  }
   .home-section {
     display: block !important;
   }
@@ -225,10 +332,14 @@ a {
   background-color: turquoise !important;
   color: white !important;
 }
+
   @media screen and (max-width:414px) {
     .skill-card {
       width: 100% !important;
     }
+    /* .source-button-link {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      font-size: x-small;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    } */
   }
   
   @media screen and (max-width:791px) {
