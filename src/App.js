@@ -14,7 +14,7 @@ import { DiCss3 } from 'react-icons/di';
 import { SiJavascript, SiMongodb } from 'react-icons/si';
 import { RiReactjsFill } from 'react-icons/ri';
 import { IoLogoNodejs } from 'react-icons/io';
-import axios from 'axios';
+//import axios from 'axios';
 import { GrLinkedinOption } from 'react-icons/gr'
 //import ScrollReveal from 'scrollreveal'
 import { Fade } from 'react-awesome-reveal'
