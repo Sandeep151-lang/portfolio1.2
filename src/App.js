@@ -322,11 +322,7 @@ const App = () => {
             </div>
           </div>
         </Fade>
-      </section>
-
-
-
-
+          </section>
       {/* 
       --------------------------section project end----------------------------------------- */}
 
@@ -405,39 +401,6 @@ const App = () => {
       --------------------------section Interest/Achievements end----------------------------------------- */}
 
 
-      {/* 
-      --------------------------section Contact start----------------------------------------- */}
-
-          {/*
-      <h1 className='text-center mt-5 about-head' id="contact">Contact</h1>
-
-        <div className='container contact-section'>
-          <form className='contact-part'>
-          <Fade cascade delay={200}>
-            <div className="mb-3">
-              <label htmlFor="name" className="form-label">Name</label>
-              <input type="text" className="form-control" id="name" aria-describedby="name" value={name} onChange={(e) => setname(e.target.value)} />
-            </div>
-          </Fade>
-          <Fade cascade delay={300}>
-            <div className="mb-3">
-              <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-              <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value={email} onChange={(e) => { setemail(e.target.value) }} />
-              <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-            </div>
-          </Fade>
-          <Fade cascade delay={400}>
-            <div className="mb-3">
-              <label htmlFor="exampleFormControlTextarea1" className="form-label">Message</label>
-                  <textarea className="form-control text-area" id="exampleFormControlTextarea1" rows="3" value={message} onChange={(e) => setmessage(e.target.value)}></textarea>
-            </div>
-          </Fade>
-
-            <button className="btn btn-primary submit-button" onClick={contact}>Submit</button>
-          </form>
-      </div> */}
-      {/* 
-      --------------------------section Contact start----------------------------------------- */}
 
 
           {/* -------------------------------------------contact section start---------------------------------- */}
