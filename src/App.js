@@ -106,7 +106,7 @@ const App = () => {
       --------------------------section home start----------------------------------------- */}
 
       <Fade direction='down' delay={50} damping="0.5" triggerOnce>
-        <section className='d-flex justify-content-space-around mt-5 home-section' id="home">
+            <section className='d-flex justify-content-space-around mt-5 home-section' id="home">
           <Container className='left '>
                 <h1>Hello,</h1>
 
@@ -115,11 +115,11 @@ const App = () => {
                   text={["Web designer"]}
                 /></p>
             <a href='#contact'><button className='btn btn-primary hire-button' >Hire Me</button></a>
-            <a href="https://drive.google.com/file/d/1LrhBajb9Dj90Qomftgm9g2aVyJhdu-9p/view" target="_blank"
+                <a href="https://drive.google.com/file/d/1LrhBajb9Dj90Qomftgm9g2aVyJhdu-9p/view" target="_blank" className='resume-button-link'
               rel="noreferrer"><button className='btn btn-primary resume-button'>Resume</button></a>
           </Container>
           <Container className='right text-center center'>
-                <img src="https://png.pngtree.com/element_our/20190529/ourlarge/pngtree-flat-wind-work-business-image_1199291.jpg" alt="me" className='about-image' height="110%" />
+                <img src="https://png.pngtree.com/element_our/20190529/ourlarge/pngtree-flat-wind-work-business-image_1199291.jpg" alt="me" className='about-image' height="100%" />
           </Container>
         </section>
       </Fade>
@@ -406,7 +406,7 @@ const App = () => {
       <Container className='d-flex text-center  inter-achieve mt-5' id="interest">
         <Container>
               <img className='interest-image' src="https://freepngimg.com/thumb/volleyball/5-2-volleyball-png-clipart.png"
-                style={{ borderRadius: '30%', maxWidth: "30rem" }} alt='imga' />
+                style={{ borderRadius: '30%', maxWidth: "100%" }} alt='imga' />
         </Container>
             <Container className=''>
               <h1 className='justify-content-evenly text-center' style={{ 'fontSize': '50px', color: 'rgb(0 28 85)' }}>Interest</h1>
@@ -423,8 +423,8 @@ const App = () => {
         </Container>
       </Container>
       <Container className='d-flex  inter-achieve mt-5 text-center'>
-        <Container className='achievemnets'>
-              <h1 className='justify-content-evenly text-center' style={{ 'fontSize': '50px', color: 'rgb(0 28 85)' }}>Achievements</h1>
+            <Container clasasName="achievements">
+              <h1 className='justify-content-evenly text-center' style={{ 'fontSize': '2.7rem', color: 'rgb(0 28 85)' }}>Achievements</h1>
           <hr />
           <Fade direction='right' delay={200} triggerOnce>
                 <p style={{ 'fontSize': '22px', color: 'rgb(109, 132, 178' }}>Developed or implemented new procedures or systems</p>
@@ -435,7 +435,7 @@ const App = () => {
         </Container>
         <Container>
               <img className='interest-image' src="https://st.depositphotos.com/1552219/3605/i/600/depositphotos_36058621-stock-photo-man-with-check-mark.jpg"
-                style={{ borderRadius: '30%', maxWidth: "30rem" }} alt='imga' />
+                style={{ borderRadius: '30%', maxWidth: "100%" }} alt='imga' />
         </Container>
       </Container>
 
@@ -483,28 +483,23 @@ const App = () => {
           <section className='mt-5 experience' id="contact" >
             <h1 className='text-center my-3' style={{ color: "rgb(0, 28, 85)", fontSize: "50px", opacity: "1" }}>Contact</h1>
             <div className='d-flex justify-content-space-around experience-flex'>
-
               <Container className='text-center center'>
                 <Fade direction='left' delay={50} damping="0.5" triggerOnce>
-
                   <img src="https://media.istockphoto.com/vectors/email-vector-flat-icon-vector-id1131969913?k=20&m=1131969913&s=612x612&w=0&h=bc001355mU2lj9gJEaeKFj--Bx3H4UBgiXUujNGQvZE="
-                    alt='img' className='experience-image' />
+                    alt='img' className='experience-image' style={{ maxWidth: "100%" }} />
                 </Fade>
               </Container>
               <Container className='center'>
-
                 <p className='text-center' style={{ color: "rgb(0, 28, 85)", fontSize: "40px", fontWeight: 'bold' }}>Address</p>
-
                 <ul className='contact-list'>
-                  <p >Type-3RD Q.No-101 Kendranchal Colony Dhoomanganj, </p>
-                  <p className='text-center'>Prayagraj/Allahabad</p>
-                  <p className='text-center'>Uttar Pradesh - 211011</p>
+                  <p className='text-center' >The Millennium Flat No.-403 , Singapore Life City, Gotalpanjari </p>
+                  <p className='text-center'>Nagpur</p>
+                  <p className='text-center'>Maharashtra - 440018</p>
                   <h1 className='text-center' style={{ color: "rgb(0, 28, 85)", fontSize: "40px", fontWeight: 'bold', marginTop: '2rem' }}>Phone Number</h1>
                   <p className='text-center'>+91 8738854495</p>
                 </ul>
-                <a href="https://github.com/Sandeep151-lang/portfolio-1.0" target="_blank"
+                <a href="https://github.com/Sandeep151-lang/portfolio1.1" target="_blank"
                   rel="noreferrer"><button className="btn btn-primary submit-button "><AiFillStar style={{ color: 'orange' }} className="mx-2" />Star Me On Github</button></a>
-
               </Container>
             </div>
           </section >

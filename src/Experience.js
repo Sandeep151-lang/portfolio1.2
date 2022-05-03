@@ -10,19 +10,17 @@ import { Fade } from 'react-awesome-reveal'
 
 const Experience = () => {
     return (
-        <section className='mt-5 experience'>
+        <div className='container-fluid experience-head'>
+            <section className=' experience'>
             <h1 className='text-center my-5' style={{ color: "rgb(0, 28, 85)", fontSize: "50px", opacity: "1" }}>What I Do?</h1>
-            <div className='d-flex justify-content-space-around experience-flex'>
-
+                <div className='d-flex justify-content-space-around experience-flex'>
                 <Container className='text-center center'>
-                    <Fade direction='left' delay={50} damping="0.5" triggerOnce>
-
+                        <Fade direction='left' delay={50} damping="0.5" triggerOnce>
                         <img src="https://st4.depositphotos.com/34031690/39622/v/380/depositphotos_396224840-stock-illustration-vector-illustration-businessman-standing-next.jpg?forcejpeg=true"
                             alt='img' className='experience-image' />
                     </Fade>
                 </Container>
-                <Container className='center'>
-
+                    <Container className='center'>
                     <p style={{ color: "rgb(0, 28, 85)", fontSize: "30px" }}>Full stack development</p>
                     <AiFillHtml5 style={{ width: 70, height: 70, color: 'rgb(227, 79, 38)' }} className="mx-3" />
                     <DiCss3 style={{ width: 70, height: 70, color: 'rgb(21, 114, 182)' }} />
@@ -33,11 +31,11 @@ const Experience = () => {
                     <ul className='what-list'>
                         <li className='mb-3'> Building responsive website front end using React</li>
                         <li>Building Ecommerce website</li>
-                    </ul>
-
+                        </ul>
                 </Container>
             </div>
-        </section >
+            </section >
+        </div>
     )
 }
 
