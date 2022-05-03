@@ -1,10 +1,7 @@
-//import logo from './logo.svg';
 import React, { useState, useEffect } from 'react'
 import './App.css';
 import { Container } from 'react-bootstrap';
 import { AiFillGithub } from 'react-icons/ai';
-//import me from '../src/assets/sandeep4.png';
-//import home1 from '../src/assets/home1.png'
 import certificate from '../src/assets/GuviCertification.png'
 import certificate1 from '../src/assets/sample2.png'
 import aboutimage from '../src/assets/sandeepcontact.png';
@@ -14,16 +11,11 @@ import { DiCss3 } from 'react-icons/di';
 import { SiJavascript, SiMongodb } from 'react-icons/si';
 import { RiReactjsFill } from 'react-icons/ri';
 import { IoLogoNodejs } from 'react-icons/io';
-//import axios from 'axios';
 import { GrLinkedinOption } from 'react-icons/gr'
-//import ScrollReveal from 'scrollreveal'
 import { Fade } from 'react-awesome-reveal'
-//import { SpinnerCircular } from 'spinners-react';
-//import TypeWriterEffect from 'react-typewriter-effect';
 import ReactTypingEffect from 'react-typing-effect';
 import Loader from './Loader';
 import Experience from './Experience';
-//import DarkModeToggle from "react-dark-mode-toggle";
 
 
 
@@ -31,7 +23,6 @@ import Experience from './Experience';
 const App = () => {
 
   const [loading, setloading] = useState(false);
-  // const [isDarkMode, setIsDarkMode] = useState(() => false);
 
   useEffect(() => {
     setloading(true);
@@ -39,25 +30,6 @@ const App = () => {
       setloading(false)
     }, 3000);
   }, [])
-
-  // const [name, setname] = useState('');
-  // const [email, setemail] = useState('');
-  // const [message, setmessage] = useState('');
-
-  // const contact = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     await axios.post('https://portfolio-section.herokuapp.com/message', { name, email, message });
-  //     setname("")
-  //     setemail("")
-  //     setmessage("")
-  //     alert('message sent')
-  //   } catch (error) {
-
-  //     alert(error.response.data)
-  //   }
-  // }
-
 
 
   return (
@@ -125,7 +97,13 @@ const App = () => {
       </Fade>
       {/* 
       --------------------------section home end----------------------------------------- */}
+
+
+          {/* ------------------------------what I Do ? section start-------------------------- */}
           <Experience />
+          {/* ------------------------------what I Do ? section end-------------------------- */}
+
+
       {/* 
       --------------------------section about start----------------------------------------- */}
       <h1 className='text-center mt-5 about-head' id="about">About</h1>
@@ -283,11 +261,7 @@ const App = () => {
                 <div className="col-md-12">
                   <div className="card-body">
                     <h5 className="card-title">Ecommerce Clone</h5>
-                    <img src="https://img.freepik.com/free-vector/happy-people-shopping-online_74855-5865.jpg?w=740&t=st=1649668701~exp=1649669301~hmac=5a9b23d49d09aae3fdb0f56d53b17d806a3dbb32cb930ebd0677ece6adc9aa9f" alt='img' width='100%' />
-                    {/* <p className="card-text">E-commerce (electronic commerce) is the activity of electronically buying or selling of
-                      products on online services or over the Internet. E-commerce draws on technologies such as
-                      mobile commerce, electronic funds transfer,
-                      supply chain management, Internet marketing, online transaction processing,</p> */}
+                        <img src="https://img.freepik.com/free-vector/happy-people-shopping-online_74855-5865.jpg?w=740&t=st=1649668701~exp=1649669301~hmac=5a9b23d49d09aae3fdb0f56d53b17d806a3dbb32cb930ebd0677ece6adc9aa9f" alt='img' width='100%' />
                     <div className='d-flex mt-3'>
                       <a href="https://ecomerce-admin-panel.herokuapp.com/" target="_blank" rel="noreferrer" ><button className='btn btn-primary source-button source-button '>view User App</button></a>
                       <a className='ms-auto' href="https://github.com/Sandeep151-lang/project1-ecommerce-user-panel" target="_blank" rel="noreferrer" ><button className='btn btn-primary source-button-link'>View source code</button></a>
@@ -305,11 +279,7 @@ const App = () => {
               <div className="row g-0">
                 <div className="col-md-12">
                   <div className="card-body">
-                    <h5 className="card-title">Equipment Hiring</h5>
-                    {/* <p className="card-text">Rental, also known as hiring or letting is an agreement where payment is made for the
-                      temporary use of a good, service or property owened by another.
-                      A gross lease is when the tenant pays a flat rental amount and the landlords pays for
-                      all property charges regularly incurred by the ownership</p> */}
+                        <h5 className="card-title">Equipment Hiring</h5>
                     <img src="https://img.freepik.com/free-vector/delivery-staff-ride-motorcycles-shopping-concept_1150-34879.jpg?w=740&t=st=1649669048~exp=1649669648~hmac=54a4dfc397c6163108f0558ba9562deb8a66f5281fa99d37a40ecadf98fa4d62" alt='img' width='100%' />
                     <div className='d-flex my-5'>
                       <a href="https://hiring-project-panel.herokuapp.com/" target="_blank" rel="noreferrer" ><button className='btn btn-primary source-button '>view App</button></a>
@@ -326,11 +296,7 @@ const App = () => {
                 <div className="col-md-12">
                   <div className="card-body">
                     <h5 className="card-title">Movie Tickets</h5>
-                    <img src="https://img.freepik.com/free-photo/cinema-cinema-attributes-cinemas-films-online-viewing-popcorn-glasses_99433-1588.jpg?w=740" alt='img' width='100%' />
-                    {/* <p className="card-text">E-commerce (electronic commerce) is the activity of electronically buying or selling of
-                      products on online services or over the Internet. E-commerce draws on technologies such as
-                      mobile commerce, electronic funds transfer,
-                      supply chain management, Internet marketing, online transaction processing,</p> */}
+                        <img src="https://img.freepik.com/free-photo/cinema-cinema-attributes-cinemas-films-online-viewing-popcorn-glasses_99433-1588.jpg?w=740" alt='img' width='100%' />
                     <div className='d-flex my-5'>
                       <a href="https://movieticketbook.herokuapp.com/" target="_blank" rel="noreferrer" ><button className='btn btn-primary source-button '>view App</button></a>
                       <a className='ms-auto' href="https://github.com/Sandeep151-lang/TicketBooking" target="_blank" rel="noreferrer" ><button className='btn btn-primary  source-button-link'>View source code</button></a>
@@ -344,11 +310,7 @@ const App = () => {
               <div className="row g-0">
                 <div className="col-md-12">
                   <div className="card-body">
-                    <h5 className="card-title">Chat App</h5>
-                    {/* <p className="card-text">Rental, also known as hiring or letting is an agreement where payment is made for the
-                      temporary use of a good, service or property owened by another.
-                      A gross lease is when the tenant pays a flat rental amount and the landlords pays for
-                      all property charges regularly incurred by the ownership</p> */}
+                        <h5 className="card-title">Chat App</h5>
                     <img src="https://img.freepik.com/free-vector/texting-concept-illustration_114360-2744.jpg?t=st=1649669321~exp=1649669921~hmac=0c9551dc5a227d81349400b2ea4564d6473b13f630a042af99ce4830237dc650&w=740" alt='img' width='100%' />
                     <div className='d-flex my-5'>
                       <a href="https://quizzical-hodgkin-b1f619.netlify.app/" target="_blank" rel="noreferrer" ><button className='btn btn-primary source-button '>view App</button></a>
