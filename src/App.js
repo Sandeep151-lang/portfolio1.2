@@ -423,7 +423,7 @@ const App = () => {
                   <h1 className='text-center' style={{ color: "rgb(0, 28, 85)", fontSize: "40px", fontWeight: 'bold', marginTop: '2rem' }}>Phone Number</h1>
                   <p className='text-center'>+91 8738854495</p>
                 </ul>
-                <a href="https://github.com/Sandeep151-lang/portfolio1.1" target="_blank"
+                <a href="https://github.com/Sandeep151-lang/portfolio1.2" target="_blank"
                   rel="noreferrer"><button className="btn btn-primary submit-button "><AiFillStar style={{ color: 'orange' }} className="mx-2" />Star Me On Github</button></a>
               </Container>
             </div>
