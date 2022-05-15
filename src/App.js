@@ -87,7 +87,7 @@ const App = () => {
                   text={["Web designer"]}
                 /></p>
             <a href='#contact'><button className='btn btn-primary hire-button' >Hire Me</button></a>
-                <a href="https://drive.google.com/file/d/1LrhBajb9Dj90Qomftgm9g2aVyJhdu-9p/view" target="_blank" className='resume-button-link'
+                <a href="https://drive.google.com/file/d/19a3TcTIBsTrzL2H3DML5NFkwmcnVyNLN/view?usp=sharing" target="_blank" className='resume-button-link'
               rel="noreferrer"><button className='btn btn-primary resume-button'>Resume</button></a>
           </Container>
           <Container className='right text-center center'>
