@@ -84,7 +84,7 @@ const App = () => {
 
                 <p>I' am <span className='my-name'> Sandeep Nandanwar</span></p>
                 <p className='my-name'><ReactTypingEffect
-                  text={["Web designer"]}
+                  text={["React Developer"]}
                 /></p>
             <a href='#contact'><button className='btn btn-primary hire-button' >Hire Me</button></a>
                 <a href="https://drive.google.com/file/d/1Z1H1dfDRrr5ACPXSyOCkFIL7a-7pOBdz/view?usp=sharing" target="_blank" className='resume-button-link'
@@ -439,7 +439,7 @@ const App = () => {
             <p>Email : sandeepnandanwar92@gmail.com</p>
           </Container>
           <Container className='mt-5'>
-            <h5 className='copyright'>&#169; COPYRIGHT 2022</h5>
+            <h5 className='copyright'>&#169; COPYRIGHT 2023</h5>
           </Container>
         </div>
       </section>
