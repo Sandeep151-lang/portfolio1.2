@@ -21,7 +21,14 @@ body {
   transition: .5s;
 }
 
+.credential{
+  font-weight:500;
+  font-size: large;
+}
 
+credential_para{
+  font-weight: bold;
+}
 .home-section {
   width: 100%;
   height: 100%;

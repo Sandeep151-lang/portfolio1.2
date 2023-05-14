@@ -16,6 +16,7 @@ import { Fade } from 'react-awesome-reveal'
 import ReactTypingEffect from 'react-typing-effect';
 import Loader from './Loader';
 import Experience from './Experience';
+import Modal from 'react-modal';
 
 
 
@@ -23,6 +24,31 @@ import Experience from './Experience';
 const App = () => {
 
   const [loading, setloading] = useState(false);
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+    },
+  };
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  // function afterOpenModal() {
+  //   // references are now sync'd and can be accessed.
+  //   subtitle.style.color = '#f00';
+  // }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
 
   useEffect(() => {
     setloading(true);
@@ -268,7 +294,7 @@ const App = () => {
                     </div>
                     <br />
                     <div className='d-flex'>
-                      <a href="https://thriving-pavlova-7d6a61.netlify.app/" target="_blank" rel="noreferrer" ><button className='btn btn-primary source-button '>view Admin App</button></a>
+                      <a href="https://thriving-pavlova-7d6a61.netlify.app/" target="_blank" rel="noreferrer" ><button className='btn btn-primary source-button '>View Admin App</button></a>
                       <a className='ms-auto' href="https://github.com/Sandeep151-lang/ecommerce-admin-panel" target="_blank" rel="noreferrer" ><button className='btn btn-primary source-button-link'>View source code</button></a>
                     </div>
                     <div className='my-3 d-flex'>
@@ -285,9 +311,33 @@ const App = () => {
                         <h5 className="card-title">Equipment Hiring</h5>
                     <img src="https://img.freepik.com/free-vector/delivery-staff-ride-motorcycles-shopping-concept_1150-34879.jpg?w=740&t=st=1649669048~exp=1649669648~hmac=54a4dfc397c6163108f0558ba9562deb8a66f5281fa99d37a40ecadf98fa4d62" alt='img' width='100%' />
                     <div className='d-flex my-5'>
-                      <a href="https://hiring-project-panel.herokuapp.com/" target="_blank" rel="noreferrer" ><button className='btn btn-primary source-button '>view App</button></a>
-                      <a className='ms-auto' href="https://github.com/Sandeep151-lang/hackathon-2-hiring-product" target="_blank" rel="noreferrer" ><button className='btn btn-primary  source-button-link'>View source code</button></a>
+                      <a href="https://deft-blini-b59258.netlify.app/" target="_blank" rel="noreferrer" ><button className='btn btn-primary source-button '>View App</button></a>
+                      <a className='ms-auto' href="https://github.com/Sandeep151-lang/equipment-product-user-panel" target="_blank" rel="noreferrer" ><button className='btn btn-primary  source-button-link'>View source code</button></a>
                     </div>
+                    <div className='d-flex'>
+                      <div>
+
+                    <button className='btn btn-primary source-button ' onClick={openModal}>Admin Credential</button>
+                      <Modal
+                        isOpen={modalIsOpen}                        
+                        onRequestClose={closeModal}
+                        style={customStyles}
+                        contentLabel="Example Modal"
+                        >
+                    <button className='btn btn-primary  source-button-link' onClick={closeModal}>Close</button>
+                    <p className='credential_para'><span className='credential'>Email:-</span>   pandit1@gmail.com</p>
+                    <p><span className='credential'>Password:-</span> Test@123</p>
+                  </Modal>
+                          </div>
+                          
+                      <a className='mx-auto' href="https://github.com/Sandeep151-lang/equipment-hiring-node" target="_blank" rel="noreferrer" ><button className='btn btn-primary source-button-link'>Backend code</button></a>
+                    
+              </div>
+                  
+                   
+{/*                       
+                    <p>Admin Credential : - pandit1@gmail.com</p>
+                    <p>Password:- Test@123</p> */}
                   </div>
                 </div>
               </div>
@@ -301,7 +351,7 @@ const App = () => {
                     <h5 className="card-title">Movie Tickets</h5>
                         <img src="https://img.freepik.com/free-photo/cinema-cinema-attributes-cinemas-films-online-viewing-popcorn-glasses_99433-1588.jpg?w=740" alt='img' width='100%' />
                     <div className='d-flex my-5'>
-                          <a href="https://movieticketbookings.herokuapp.com/" target="_blank" rel="noreferrer" ><button className='btn btn-primary source-button '>view App</button></a>
+                          <a href="https://movieticketbookings.herokuapp.com/" target="_blank" rel="noreferrer" ><button className='btn btn-primary source-button '>View App</button></a>
                       <a className='ms-auto' href="https://github.com/Sandeep151-lang/TicketBooking" target="_blank" rel="noreferrer" ><button className='btn btn-primary  source-button-link'>View source code</button></a>
                     </div>
 
