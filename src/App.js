@@ -285,7 +285,37 @@ const App = () => {
             <div className="card mb-3 w3-card-4 project-card" style={{ "maxWidth": "23rem" }}>
               <div className="row g-0">
                 <div className="col-md-12">
-                  <div className="card-body">
+                <div className="card-body">
+                        <h5 className="card-title">Equipment Hiring</h5>
+                    <img src="https://img.freepik.com/free-vector/delivery-staff-ride-motorcycles-shopping-concept_1150-34879.jpg?w=740&t=st=1649669048~exp=1649669648~hmac=54a4dfc397c6163108f0558ba9562deb8a66f5281fa99d37a40ecadf98fa4d62" alt='img' width='100%' />
+                    <div className='d-flex my-5'>
+                      <a href="https://deft-blini-b59258.netlify.app/" target="_blank" rel="noreferrer" ><button className='btn btn-primary source-button '>View App</button></a>
+                      <a className='ms-auto' href="https://github.com/Sandeep151-lang/equipment-product-user-panel" target="_blank" rel="noreferrer" ><button className='btn btn-primary  source-button-link'>View source code</button></a>
+                    </div>
+                    <div className='d-flex'>
+                      <div>
+                    <button className='btn btn-primary source-button ' onClick={openModal}>Admin Credential</button>
+                      <Modal
+                        isOpen={modalIsOpen}                        
+                        onRequestClose={closeModal}
+                        style={customStyles}
+                        contentLabel="Example Modal"
+                        >
+                    <button className='btn btn-primary  source-button-link' onClick={closeModal}>Close</button>
+                    <p className='credential_para'><span className='credential'>Email:-</span>   pandit1@gmail.com</p>
+                    <p><span className='credential'>Password:-</span> Test@123</p>
+                  </Modal>
+                    </div>
+                      <a className='mx-auto' href="https://github.com/Sandeep151-lang/equipment-hiring-node" target="_blank" rel="noreferrer" ><button className='btn btn-primary source-button-link'>Backend code</button></a>      
+                  </div>
+                  </div>   
+                </div>
+              </div>
+            </div>
+            <div className="card mb-3 w3-card-4 project-card" style={{ "maxWidth": "23rem" }}>
+              <div className="row g-0">
+                <div className="col-md-12">
+                <div className="card-body">
                     <h5 className="card-title">Ecommerce Clone</h5>
                         <img src="https://img.freepik.com/free-vector/happy-people-shopping-online_74855-5865.jpg?w=740&t=st=1649668701~exp=1649669301~hmac=5a9b23d49d09aae3fdb0f56d53b17d806a3dbb32cb930ebd0677ece6adc9aa9f" alt='img' width='100%' />
                     <div className='d-flex mt-3'>
@@ -300,44 +330,6 @@ const App = () => {
                     <div className='my-3 d-flex'>
                       <a className='mx-auto' href="https://github.com/Sandeep151-lang/ecommerce-node" target="_blank" rel="noreferrer" ><button className='btn btn-primary source-button-link'>Backend source code</button></a>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="card mb-3 w3-card-4 project-card" style={{ "maxWidth": "23rem" }}>
-              <div className="row g-0">
-                <div className="col-md-12">
-                  <div className="card-body">
-                        <h5 className="card-title">Equipment Hiring</h5>
-                    <img src="https://img.freepik.com/free-vector/delivery-staff-ride-motorcycles-shopping-concept_1150-34879.jpg?w=740&t=st=1649669048~exp=1649669648~hmac=54a4dfc397c6163108f0558ba9562deb8a66f5281fa99d37a40ecadf98fa4d62" alt='img' width='100%' />
-                    <div className='d-flex my-5'>
-                      <a href="https://deft-blini-b59258.netlify.app/" target="_blank" rel="noreferrer" ><button className='btn btn-primary source-button '>View App</button></a>
-                      <a className='ms-auto' href="https://github.com/Sandeep151-lang/equipment-product-user-panel" target="_blank" rel="noreferrer" ><button className='btn btn-primary  source-button-link'>View source code</button></a>
-                    </div>
-                    <div className='d-flex'>
-                      <div>
-
-                    <button className='btn btn-primary source-button ' onClick={openModal}>Admin Credential</button>
-                      <Modal
-                        isOpen={modalIsOpen}                        
-                        onRequestClose={closeModal}
-                        style={customStyles}
-                        contentLabel="Example Modal"
-                        >
-                    <button className='btn btn-primary  source-button-link' onClick={closeModal}>Close</button>
-                    <p className='credential_para'><span className='credential'>Email:-</span>   pandit1@gmail.com</p>
-                    <p><span className='credential'>Password:-</span> Test@123</p>
-                  </Modal>
-                          </div>
-                          
-                      <a className='mx-auto' href="https://github.com/Sandeep151-lang/equipment-hiring-node" target="_blank" rel="noreferrer" ><button className='btn btn-primary source-button-link'>Backend code</button></a>
-                    
-              </div>
-                  
-                   
-{/*                       
-                    <p>Admin Credential : - pandit1@gmail.com</p>
-                    <p>Password:- Test@123</p> */}
                   </div>
                 </div>
               </div>
