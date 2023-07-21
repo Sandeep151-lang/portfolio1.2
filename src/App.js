@@ -343,8 +343,11 @@ const App = () => {
                     <h5 className="card-title">Movie Tickets</h5>
                         <img src="https://img.freepik.com/free-photo/cinema-cinema-attributes-cinemas-films-online-viewing-popcorn-glasses_99433-1588.jpg?w=740" alt='img' width='100%' />
                     <div className='d-flex my-5'>
-                          <a href="https://movieticketbookings.herokuapp.com/" target="_blank" rel="noreferrer" ><button className='btn btn-primary source-button '>View App</button></a>
-                      <a className='ms-auto' href="https://github.com/Sandeep151-lang/TicketBooking" target="_blank" rel="noreferrer" ><button className='btn btn-primary  source-button-link'>View source code</button></a>
+                          <a href="https://main--grand-lebkuchen-a058f7.netlify.app/" target="_blank" rel="noreferrer" ><button className='btn btn-primary source-button '>View App</button></a>
+                      <a className='ms-auto' href="https://github.com/Sandeep151-lang/movie-ticket-booking-front" target="_blank" rel="noreferrer" ><button className='btn btn-primary  source-button-link'>View source code</button></a>
+                    </div>
+                    <div className='my-3 d-flex'>
+                      <a className='mx-auto' href="https://github.com/Sandeep151-lang/movie-ticket-booking-node" target="_blank" rel="noreferrer" ><button className='btn btn-primary source-button-link'>Backend source code</button></a>
                     </div>
 
                   </div>
